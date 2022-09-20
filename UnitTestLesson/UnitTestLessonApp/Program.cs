@@ -1,6 +1,6 @@
 ﻿namespace UnitTestLessonApp
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -9,7 +9,7 @@
             Console.WriteLine(output);
         }
 
-        private static string GetGreeting(int timeOfDay)
+        public static string GetGreeting(int timeOfDay)
         {
 
             if (timeOfDay >= 5 && timeOfDay <= 12)
