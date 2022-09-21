@@ -31,7 +31,11 @@
 
             //Demo 2: Functions
 
-            PrintTimeToBirthday(182);
+            //PrintTimeToBirthday(182);
+
+            int mark = 35;
+
+
 
         }
 
@@ -47,8 +51,6 @@
         }
 
         public static bool ReturnTrueIfEven(int num) => (num % 2 == 0);
-
-
 
     }
 }
