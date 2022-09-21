@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorsAndControlFlowApp", "OperatorsAndControlFlowApp\OperatorsAndControlFlowApp.csproj", "{30897004-FB7F-4C36-A02A-7785B854E231}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsAndControlFlowApp", "OperatorsAndControlFlowApp\OperatorsAndControlFlowApp.csproj", "{30897004-FB7F-4C36-A02A-7785B854E231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorsAndControlFlowTest", "OperatorsAndControlFlowTest\OperatorsAndControlFlowTest.csproj", "{BCB683AE-253D-4759-ABAF-646A71ABAB6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsAndControlFlowTest", "OperatorsAndControlFlowTest\OperatorsAndControlFlowTest.csproj", "{BCB683AE-253D-4759-ABAF-646A71ABAB6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsApp", "ExceptionsApp\ExceptionsApp.csproj", "{1C23B060-87A0-41C4-82DD-4E1A98C95E30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsDataTypesTests", "ExceptionsDataTypesTests\ExceptionsDataTypesTests.csproj", "{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{BCB683AE-253D-4759-ABAF-646A71ABAB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCB683AE-253D-4759-ABAF-646A71ABAB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCB683AE-253D-4759-ABAF-646A71ABAB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C23B060-87A0-41C4-82DD-4E1A98C95E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C23B060-87A0-41C4-82DD-4E1A98C95E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C23B060-87A0-41C4-82DD-4E1A98C95E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C23B060-87A0-41C4-82DD-4E1A98C95E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
