@@ -1,4 +1,6 @@
-﻿namespace OperatorsAndControlFlowApp
+﻿using System.Diagnostics.Metrics;
+
+namespace OperatorsAndControlFlowApp
 {
     internal class Program
     {
@@ -29,11 +31,40 @@
 
             */
 
-            //Demo 2: Functions
+            /*
+            Demo 2: Functions
 
-            //PrintTimeToBirthday(182);
+            PrintTimeToBirthday(182);
+            */
 
             int mark = 35;
+            //if greater than or equal to 85, return "distinction" else:
+
+            //Turnery operator
+            //is this true?
+            //if not,
+            //if so,
+            var grade = mark >= 65 ? "Pass" : "Fail";
+
+            //nested turnery operator
+            var gradeDistinction = mark >= 65 ? (mark >= 85 ? "Distinction" : "Pass") : "Fail";
+
+            var gradeExample2 = mark >= 85 ? "Distinction" : (mark >= 65 ? "Pass" : "Fail");
+
+            //swtiches
+            switch (mark)
+            {
+                case >= 85:
+                    grade = "Distinction";
+                    break;
+                case >= 65:
+                    grade = "Pass";
+                    break;
+                default:
+                    grade = "Fail";
+                    break;
+            }
+
 
 
 
@@ -51,6 +82,32 @@
         }
 
         public static bool ReturnTrueIfEven(int num) => (num % 2 == 0);
+
+
+        public static string Priority(int level)
+        {​​
+            string priority = "Code ";
+            switch (level)
+            {
+                case 3:
+                    priority = priority + "Red";
+                    //this would be the same and would run without the break statement
+                    //return priority + "Red";
+                    break;
+                case 2:
+                    //blank cases will fall underneath. 2 will run 1
+                case 1:
+                    priority = priority + "Amber";
+                    break;
+                case 0:
+                    priority = priority + "Green";
+                    break;
+                default:
+                    priority = "Error";
+                    break;
+            }
+            return priority;
+        }​​
 
     }
 }
