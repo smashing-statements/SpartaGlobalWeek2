@@ -37,21 +37,23 @@ namespace OperatorsAndControlFlowApp
             PrintTimeToBirthday(182);
             */
 
-            int mark = 35;
+            //int mark = 35;
             //if greater than or equal to 85, return "distinction" else:
 
-            //Turnery operator
+            //Ternery operator
             //is this true?
-            //if not,
             //if so,
-            var grade = mark >= 65 ? "Pass" : "Fail";
+            //if not,
+            //var grade = mark >= 65 ? "Pass" : "Fail";
 
             //nested turnery operator
-            var gradeDistinction = mark >= 65 ? (mark >= 85 ? "Distinction" : "Pass") : "Fail";
+            //var gradeDistinction = mark >= 65 ? (mark >= 85 ? "Distinction" : "Pass") : "Fail";
 
-            var gradeExample2 = mark >= 85 ? "Distinction" : (mark >= 65 ? "Pass" : "Fail");
+            //var gradeExample2 = mark >= 85 ? "Distinction" : (mark >= 65 ? "Pass" : "Fail");
 
             //swtiches
+
+            /*
             switch (mark)
             {
                 case >= 85:
@@ -64,18 +66,26 @@ namespace OperatorsAndControlFlowApp
                     grade = "Fail";
                     break;
             }
+            */
 
             //Iterations
 
             List<int> nums = new List<int> { 10, 6, 22, -17, 3 };
-           // Console.WriteLine("Highest foreach loop: " + LoopTypes.HighestForEachLoop(nums));
-            //Console.WriteLine("Highest for- loop: " + LoopTypes.HighestForLoop(nums));
-            //Console.WriteLine("Highest while- loop: " + LoopTypes.HighestWhileLoop(nums));
-            //Console.WriteLine("Highest do-while loop: " + LoopTypes.HighestDoWhileLoop(nums));
+            List<int> nums2 = new List<int> { -10, -6, -22, -17, -3 };
 
+            Console.WriteLine("Highest foreach loop: " + LoopTypes.HighestForEachLoop(nums));
+            Console.WriteLine("Highest for- loop: " + LoopTypes.HighestForLoop(nums));
+            Console.WriteLine("Highest while- loop: " + LoopTypes.HighestWhileLoop(nums));
+            Console.WriteLine("Highest do-while loop: " + LoopTypes.HighestDoWhileLoop(nums));
+
+            Console.WriteLine("Highest foreach loop: " + LoopTypes.HighestForEachLoop(nums2));
+            Console.WriteLine("Highest for- loop: " + LoopTypes.HighestForLoop(nums2));
+            Console.WriteLine("Highest while- loop: " + LoopTypes.HighestWhileLoop(nums2));
+            Console.WriteLine("Highest do-while loop: " + LoopTypes.HighestDoWhileLoop(nums2));
 
         }
 
+        /*
         public static void PrintTimeToBirthday(int days)
         {
             //write to console the weeks and days left
@@ -86,8 +96,9 @@ namespace OperatorsAndControlFlowApp
             Console.WriteLine(string.Format("There are {0} weeks and {1} days remaining until your birthday!", weeks, remainingDays));
 
         }
+        */
 
-        public static bool ReturnTrueIfEven(int num) => (num % 2 == 0);
+        //public static bool ReturnTrueIfEven(int num) => (num % 2 == 0);
 
 
 
