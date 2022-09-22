@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsAndControlFlowApp"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsAndControlFlowTest", "OperatorsAndControlFlowTest\OperatorsAndControlFlowTest.csproj", "{BCB683AE-253D-4759-ABAF-646A71ABAB6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsApp", "ExceptionsApp\ExceptionsApp.csproj", "{1C23B060-87A0-41C4-82DD-4E1A98C95E30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionsApp", "ExceptionsApp\ExceptionsApp.csproj", "{1C23B060-87A0-41C4-82DD-4E1A98C95E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsDataTypesTests", "ExceptionsDataTypesTests\ExceptionsDataTypesTests.csproj", "{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionsDataTypesTests", "ExceptionsDataTypesTests\ExceptionsDataTypesTests.csproj", "{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericDataTypes", "NumericDataTypes\NumericDataTypes.csproj", "{4226157B-A2FC-4324-A5F0-8113E33F5466}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB68C54D-5BC7-4987-A6E5-78416E03FAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4226157B-A2FC-4324-A5F0-8113E33F5466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4226157B-A2FC-4324-A5F0-8113E33F5466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4226157B-A2FC-4324-A5F0-8113E33F5466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4226157B-A2FC-4324-A5F0-8113E33F5466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
