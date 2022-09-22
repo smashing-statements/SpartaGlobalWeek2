@@ -9,7 +9,8 @@ namespace DataTypes_Lib
             if (num >= short.MaxValue+1)
             {
                 throw new OverflowException("Cannot cast to short: uint too large");
-            } else
+            } 
+            else
             {
                 return (short)num;
             }
