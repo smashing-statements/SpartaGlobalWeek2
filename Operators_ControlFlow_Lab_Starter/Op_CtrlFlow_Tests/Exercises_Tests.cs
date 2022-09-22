@@ -68,5 +68,24 @@ namespace Op_CtrlFlow_Tests
                 .With.Message.Contain("Allowed range 0-100"));
         }
 
+        [TestCase(4, 20)]
+        [TestCase(3, 50)]
+        [TestCase(2, 50)]
+        [TestCase(1, 100)]
+        [TestCase(0, 200)]
+        public void GivenAlertLevel_ReturnMaxAttendees(int covidLevel, int expectedMaxAttendees)
+        {
+            var result = Exercises.GetScottishMaxWeddingNumbers(covidLevel);
+            Assert.That(result, Is.EqualTo(expectedMaxAttendees));
+        }
+
+        [TestCase(-1)]
+        [TestCase(5)]
+        public void GivenInvalidAlertLevel_ThrowsAnArgumentOutOfRangeException(int covidLevel)
+        {
+            Assert.That(() => Exercises.GetScottishMaxWeddingNumbers(covidLevel), Throws.TypeOf<ArgumentOutOfRangeException>()
+                .With.Message.Contain("Allowed range 0-4"));
+        }
+
     }
 }

@@ -59,6 +59,7 @@ namespace Op_CtrlFlow
 
         public static string Grade(int mark)
         {
+            /*
             switch (mark)
             {
                 case < 0:
@@ -74,11 +75,52 @@ namespace Op_CtrlFlow
                 case > 100:
                     throw new ArgumentOutOfRangeException("Mark: " + mark + " Allowed range 0-100");
             }
+            */
+            if (mark >= 0 && mark <= 100)
+            {
+                if (mark <= 39)
+                {
+                    return "Fail";
+                } 
+                else if (mark <= 59)
+                {
+                    return "Pass";
+                }
+                else if (mark <= 74)
+                {
+                    return "Pass with Merit";
+                }
+                else
+                {
+                    return "Pass with Distinction";
+                }
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("Mark: " + mark + " Allowed range 0-100");
+            }
+
         }
 
         public static int GetScottishMaxWeddingNumbers(int covidLevel)
         {
-            return 0;
+            switch (covidLevel)
+            {
+                case < 0:
+                    throw new ArgumentOutOfRangeException("Mark: " + covidLevel + " Allowed range 0-4");
+                case 0:
+                    return 200;
+                case 1:
+                    return 100;
+                case 2:
+                    return 50;
+                case 3:
+                    return 50;
+                case 4:
+                    return 20;
+                case > 4:
+                    throw new ArgumentOutOfRangeException("Mark: " + covidLevel + " Allowed range 0-4");
+            }
         }
     }
 }
