@@ -30,6 +30,13 @@ namespace Op_CtrlFlow_Tests
             Assert.That(Exercises.Average(myList), Is.EqualTo(0));
         }
 
+        [Test]
+        public void WhenListIsEmpty_ExceptionThrown()
+        {
+            Assert.That(() => Exercises.Average(new List<int>()), Throws.TypeOf<ArgumentOutOfRangeException>()
+                .With.Message.Contain("Please submit a non-empty array"));
+        }
+
         [TestCase(100, "OAP")]
         [TestCase(60, "OAP")]
         [TestCase(59, "Standard")]
@@ -46,6 +53,14 @@ namespace Op_CtrlFlow_Tests
             Assert.That(result, Is.EqualTo(expected));
         }
 
+        [TestCase(-1)]
+        [TestCase(-20)]
+        public void GivenInvalidAge_ThrowException(int age)
+        {
+            Assert.That(() => Exercises.TicketType(age), Throws.TypeOf<ArgumentOutOfRangeException>()
+                .With.Message.Contain("Age must be at least 0"));
+        }
+
         [TestCase(100, "Pass with Distinction")]
         [TestCase(75, "Pass with Distinction")]
         [TestCase(74, "Pass with Merit")]
@@ -60,9 +75,9 @@ namespace Op_CtrlFlow_Tests
             Assert.That(result, Is.EqualTo(expectedGrade));
         }
 
-        [TestCase(101)]
+        [TestCase(-101)]
         [TestCase(30000)]
-        public void WhenTheScoreIsMoreThanOneHundred_Grade_ThrowsAnArgumentOutOfRangeException(int score)
+        public void WhenTheScoreIsInvalid_Grade_ThrowsAnArgumentOutOfRangeException(int score)
         {
             Assert.That(() => Exercises.Grade(score), Throws.TypeOf<ArgumentOutOfRangeException>()
                 .With.Message.Contain("Allowed range 0-100"));

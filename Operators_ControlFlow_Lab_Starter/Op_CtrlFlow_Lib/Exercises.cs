@@ -26,9 +26,15 @@ namespace Op_CtrlFlow
 
                 total /= nums.Count;
 
-            } 
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("Please submit a non-empty array");
+
+            }
 
             return total;
+
         }
 
         // returns the type of ticket a customer is eligible for based on their age
@@ -43,6 +49,8 @@ namespace Op_CtrlFlow
 
             switch (age)
             {
+                case < 0:
+                    throw new ArgumentOutOfRangeException("Age must be at least 0");
                 case < 5:
                     return "Free";
                 case < 13:
