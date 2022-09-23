@@ -68,6 +68,63 @@ namespace NumericDataTypes
             Console.WriteLine(x);
             Console.WriteLine(y);
 
+            int numCows = 260;
+            uint countCows = (uint)numCows;
+            //below returns it as 4
+            //256 is byte max so it overflows
+            //Overflows go straight from 256 to 0
+            byte byteCows = (byte)numCows;
+
+            int bankBalance = -2;
+            //This returns a very high number
+            //almost highest poss value for uint
+            uint posBalance = (uint)bankBalance;
+
+            //Printing to binary actually prints these the same
+            //for some reason?
+            //Console.WriteLine(Convert.ToString(bankBalance, 2));
+            //Console.WriteLine(Convert.ToString(posBalance, 2));
+
+            //Console.WriteLine(Convert.ToString(numCows, 2));
+            //Console.WriteLine(Convert.ToString(byteCows, 2));
+
+            //You cannot case to and from certain field types
+            //float pi = 3.14f;
+            //bool boolPi = (bool)pi;
+            //DateTime piDay = (DateTime)pi;
+
+            //The Convert Class
+
+            //var theInt = 5;
+            //var anotherInt = Convert.ToInt32(theInt);
+
+            //safe - widening
+
+            //var myDouble = Convert.ToDouble(theInt);
+
+            //narrowing (unsafe) with no data loss
+
+            //var myShort = Convert.ToInt16(theInt);
+            double myPi = 3.14;
+            //float floatPi = Convert.ToSingle(myPi);
+
+            //unsafe conversions with loss of data
+            //int myCows = 260;
+            //byte myByteCows = Convert.ToByte(myCows);
+
+            //int myBankBalance = -2;
+            //uint myPosBalance = Convert.ToUInt32(myBankBalance);
+
+            //invalid
+            //DateTime piDay = Convert.ToDateTime(myPi);
+
+            int myFive = Convert.ToInt32("5");
+
+            byte num = Byte.MaxValue;
+            Console.WriteLine("Byte max: " + num);
+            num += 1;
+            Console.WriteLine(num);
+
         }
     }
 }

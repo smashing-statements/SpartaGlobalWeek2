@@ -6,7 +6,7 @@ namespace DataTypes_Lib
     {
         public static int Add(int num1, int num2)
         {
-
+            // product of num1 and num2 will not test correctly unless checked
             if (int.MaxValue < checked(num1 + num2))
             {
                 throw new OverflowException();
@@ -24,6 +24,8 @@ namespace DataTypes_Lib
 
         public static int Subtract(int num1, int num2)
         {
+            //Same for this calculator, product of num1 minus num2 
+            //must be checked
             if (checked(num1 - num2) < int.MinValue)
             {
                 throw new OverflowException();
