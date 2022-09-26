@@ -91,13 +91,26 @@ namespace MoreTypes_Lib
         // returns the name of the month corresponding to a given date
         public static string GetMonthString(DateTime date)
         {
-            return string.Empty;
+            return date.ToString("MMMM");
         }
 
         // see unit tests for requirements
         public static string Fortune(Suit suit)
         {
-            return string.Empty;
+            switch (suit)
+            {
+                case Suit.HEARTS:
+                    return "You've broken my heart";
+                case Suit.CLUBS:
+                    return "And the seventh rule is if this is your first night at fight club, you have to fight.";
+                case Suit.DIAMONDS:
+                    return "Diamonds are a girls best friend";
+                case Suit.SPADES:
+                    return "Bucket and spade";
+                default:
+                    return "Invalid Input";
+            }
+
         }
     }
 }
