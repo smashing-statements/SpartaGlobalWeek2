@@ -6,6 +6,12 @@ namespace MoreDataTypesApp
 {
     internal class Program
     {
+
+        public enum Suit
+        {
+            HEARTS = 10, CLUBS, DIAMONDS = 15, SPADES
+        }
+
         static void Main(string[] args)
         {
 
@@ -34,6 +40,8 @@ namespace MoreDataTypesApp
 
             #region ARRAYS
 
+            /*
+
             int[] myIntArray = { 12, 23, 34, 45, 56 };
             Array.Reverse<int>(myIntArray);
             foreach (var element in myIntArray)
@@ -42,6 +50,41 @@ namespace MoreDataTypesApp
             }
 
             JaggedArrays();
+            */
+
+            #endregion
+
+            #region DATETIME
+
+            var now = DateTime.Now;
+            Console.WriteLine($"The time in ticks now: {now.Ticks}");
+
+            var tomorrow = now.AddDays(1);
+
+            Suit theSuit = Suit.HEARTS;
+
+            theSuit = Suit.SPADES;
+
+            if (theSuit == Suit.HEARTS)
+            {
+                Console.WriteLine("I heart you");
+            }
+            else if (theSuit == Suit.CLUBS)
+            {
+                Console.WriteLine($"I club you, not I {Suit.DIAMONDS} you");
+            }
+            else if ((int)theSuit == 16)
+            {
+                Console.WriteLine($"the value of {theSuit} is 16");
+            }
+
+            var myDiamonds = 15;
+            var myDiamondsSuit = (Suit)myDiamonds;
+
+            Console.WriteLine(myDiamondsSuit);
+
+            var anotherSuit = Enum.TryParse("DIAMONDS", out Suit result);
+            Console.WriteLine(result);
 
             #endregion
 
