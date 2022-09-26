@@ -8,6 +8,11 @@ namespace MoreDataTypesApp
     {
         static void Main(string[] args)
         {
+
+            #region STRINGS
+
+            /*
+
             var myString = "  C# list fundamentals ";
             //Console.WriteLine(StringExercise(myString));
 
@@ -22,7 +27,80 @@ namespace MoreDataTypesApp
             //StringInterpolation(myString);
 
             ParsingStrings();
+
+            */
+
+            #endregion
+
+            #region ARRAYS
+
+            int[] myIntArray = { 12, 23, 34, 45, 56 };
+            Array.Reverse<int>(myIntArray);
+            foreach (var element in myIntArray)
+            {
+                Console.WriteLine(element);
+            }
+
+            JaggedArrays();
+
+            #endregion
+
         }
+
+        #region ARRAY_METHODS
+
+        public static void JaggedArrays()
+        {
+            // Jagged arrays
+            int[][] intJArray = new int[2][];
+            //first parameter must be declared because the minimum
+            //the system must know is how many arrays there will be
+            //independent of their length
+            intJArray[0] = new int[4];
+            intJArray[1] = new int[2];
+
+            intJArray[0][2] = 3;
+            intJArray[1][0] = 5;
+
+            string[][] animalArray = new string[][]
+            {
+                new string[] { "llama", "puma", "horse", "kitten" },
+                new string[] { "haddock", "tuna"}
+            };
+
+            foreach (var row in animalArray)
+            {
+                foreach (var element in row)
+                {
+                    Console.WriteLine(element);
+                }
+            }
+
+        }
+
+        public static void MultiDArrays()
+        {
+            //2D Arrays
+            int[,] gridOG = new int[2, 4];
+            gridOG[0, 1] = 6;
+            gridOG[1, 0] = 8;
+            gridOG[1, 3] = 10;
+
+            char[,] gridTwo =
+            {
+                {'a', 'b' },
+                {'c', 'd' },
+                {'e', 'f' },
+                {'g', 'h' }
+            };
+
+            int[,,] grid = new int[2, 4, 3];
+
+        }
+
+        #endregion
+
+        #region STRING_METHODS
 
         public static void StringInterpolation(string str)
         {
@@ -50,7 +128,7 @@ namespace MoreDataTypesApp
             //int numApples = Int32.TryParse(input, out int parsedApples)
             var success = Int32.TryParse(input, out int parsedApples);
         }
-    
+
 
         public static string StringExercise(string myString)
         {
@@ -89,5 +167,7 @@ namespace MoreDataTypesApp
             return sb.ToString();
 
         }
+
+        #endregion
     }
 }
