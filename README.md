@@ -13,6 +13,10 @@ Each folder in this repository corresponds to a lesson demo or lab exercise. Ord
 - Certification method Lab 02a 
 - Operators and control flow 3 lab
 - Exceptions 3 lab
+- Strings and Datatypes lab
+- Methods App (Phil's demonstration)
+- Datatypes Lab 2
+- Memory model code-a-long
 
 ## Areas to Improve
 
