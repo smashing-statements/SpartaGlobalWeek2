@@ -94,8 +94,10 @@ namespace MoreTypes_Lib
                 throw new ArgumentException("Number of elements in list must match array size");
             }
             return new string[][] {
+
                 (contents.GetRange(0, countRow1).ToArray()),
                 (contents.GetRange(countRow1, countRow2).ToArray())
+
             };
 
 
